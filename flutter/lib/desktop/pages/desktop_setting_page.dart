@@ -1559,7 +1559,7 @@ class _AboutState extends State<_About> {
                     height: 8.0,
                   ),
                   SelectionArea(
-                      child: Text('${translate('Version')}: $version')
+                      child: Text('${translate('Version')}: lolo')
                           .marginSymmetric(vertical: 4.0)),
                   SelectionArea(
                       child: Text('${translate('Build Date')}: $buildDate')

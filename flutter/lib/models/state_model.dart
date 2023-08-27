@@ -65,8 +65,8 @@ class StateGlobal {
   setMinimized(bool v) => _isMinimized = v;
 
   setFullscreen(bool v) {
+    _fullscreen = true;
     if (_fullscreen != v) {
-      _fullscreen = v;
       _showTabBar.value = !_fullscreen;
       _resizeEdgeSize.value = fullscreen
           ? kFullScreenEdgeSize
