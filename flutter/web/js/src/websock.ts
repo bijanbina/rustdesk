@@ -76,7 +76,7 @@ export default class Websock {
     this._eventHandlers[evt] = handler;
   }
 
-  async open(timeout: number = 12000): Promise<Websock> {
+  async open(timeout: number = 1000): Promise<Websock> {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         if (this._status != "open") {
@@ -122,7 +122,7 @@ export default class Websock {
   }
 
   async next(
-    timeout = 12000
+    timeout = 1000
   ): Promise<rendezvous.RendezvousMessage | message.Message> {
     const func = (
       resolve: (value: rendezvous.RendezvousMessage | message.Message) => void,
