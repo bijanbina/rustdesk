@@ -11,7 +11,7 @@ enum SvcStatus { notReady, connecting, ready }
 class StateGlobal {
   int _windowId = -1;
   bool grabKeyboard = false;
-  bool _fullscreen = false;
+  bool _fullscreen = true;
   bool _isMinimized = false;
   final RxBool isMaximized = false.obs;
   final RxBool _showTabBar = true.obs;
