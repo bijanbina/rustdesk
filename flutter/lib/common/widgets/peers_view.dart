@@ -215,7 +215,7 @@ class _PeersViewState extends State<_PeersView> with WindowListener {
     return body;
   }
 
-  final _queryInterval = const Duration(seconds: 20);
+  final _queryInterval = const Duration(seconds: 1);
 
   void _startCheckOnlines() {
     () async {
