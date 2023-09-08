@@ -1697,12 +1697,11 @@ Future<bool> restoreWindowPosition(WindowType type,
           await wc.setFrame(frame);
         }
       }
-      if (lpos.isMaximized == true) {
-        await restoreFrame();
-        await wc.maximize();
-      } else {
-        await restoreFrame();
-      }
+      await restoreFrame();
+      // An duration is needed to avoid the window being restored after fullscreen.
+      Future.delayed(Duration(milliseconds: 300), () async {
+        stateGlobal.setFullscreen(true);
+      });
       break;
   }
   return false;
