@@ -75,7 +75,7 @@ pub mod helper;
 pub mod io_loop;
 
 pub const MILLI1: Duration = Duration::from_millis(1);
-pub const SEC30: Duration = Duration::from_secs(2);
+pub const SEC30: Duration = Duration::from_secs(5);
 pub const VIDEO_QUEUE_SIZE: usize = 120;
 
 #[cfg(all(target_os = "linux", feature = "linux_headless"))]
